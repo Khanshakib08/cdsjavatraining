@@ -9,8 +9,24 @@ public class BMIcalculator {
         int weight=sc.nextInt();
         System.out.print("Enter your height(in cm) : ");
         int height=sc.nextInt();
-        double bmi=((double)weight/((double)Math.pow(height,2)))*10000;
-        System.out.println("Your BMI is : "+bmi);
+        float bmi=((float)weight/((float)Math.pow(height,2)))*10000;
+        System.out.println("Your BMI is : "+bmi+"kg/m²");
+        if(bmi<18.5)
+        {
+            System.out.println("You are underweight.");
+        }
+        else if(bmi<25)
+        {
+            System.out.println("You are normal.");
+        }
+        else if(bmi<30)
+        {
+            System.out.println("You are overweight.");
+        }
+        else
+        {
+            System.out.println("You are obese.");
+        }
     }
 
 }
