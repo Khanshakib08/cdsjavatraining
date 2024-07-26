@@ -9,7 +9,8 @@ public class BMIcalculator {
         int weight=sc.nextInt();
         System.out.print("Enter your height(in cm) : ");
         int height=sc.nextInt();
-        float bmi=((float)weight/((float)Math.pow(height,2)))*10000;
+        float bmi=((float)weight/((float
+        )Math.pow(height,2)))*10000;
         System.out.println("Your BMI is : "+bmi+"kg/m²");
         if(bmi<18.5)
         {
