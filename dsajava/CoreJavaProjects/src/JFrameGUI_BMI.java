@@ -22,11 +22,14 @@ public static void main(String[] args) {
     JTextField userHeightTextField=new JTextField();
     userHeightTextField.setBounds(250, 80, 60, 40);
 
-    JLabel userResultLabel= new JLabel("");
-    userResultLabel.setBounds(200, 160, 200, 50);
+    JLabel userResultLabel1= new JLabel("");
+    userResultLabel1.setBounds(250, 140, 200, 50);
+
+    JLabel userResultLabel2= new JLabel("");
+    userResultLabel2.setBounds(250, 120, 200, 40);
 
     JButton calculateBMI= new JButton("Calculate BMI");
-    calculateBMI.setBounds(200, 120, 150, 50);
+    calculateBMI.setBounds(100, 130, 120, 50);
     jFrame.add(calculateBMI);
 
     jFrame.add(userWeightLabel);
@@ -36,7 +39,8 @@ public static void main(String[] args) {
     jFrame.add(userHeightLabel);
     jFrame.add(userHeightTextField);
 
-    jFrame.add(userResultLabel);
+    jFrame.add(userResultLabel1);
+    jFrame.add(userResultLabel2);
 
     jFrame.add(calculateBMI);
     calculateBMI.addActionListener(new ActionListener() {
@@ -47,24 +51,25 @@ public static void main(String[] args) {
                float weight=Float.parseFloat(userWeightTextField.getText().toString());
              float height=Float.parseFloat(userHeightTextField.getText().toString());
              float bmivalue=weight/(height*height);
-            calculateBMI.setText(String.valueOf(bmivalue));
+            
+            userResultLabel2.setText(String.valueOf(bmivalue));
 
             
             if(bmivalue<18.5)
         {
-            userResultLabel.setText("You are underweight.");
+            userResultLabel1.setText("You are underweight.");
         }
             else if(bmivalue<25)
         {
-            userResultLabel.setText("You are normal.");
+            userResultLabel1.setText("You are normal.");
         }
             else if(bmivalue<30)
         {
-            userResultLabel.setText("You are overweight.");
+            userResultLabel1.setText("You are overweight.");
         }
             else
         {
-            userResultLabel.setText("You are obese.");
+            userResultLabel1.setText("You are obese.");
         }
         
 
