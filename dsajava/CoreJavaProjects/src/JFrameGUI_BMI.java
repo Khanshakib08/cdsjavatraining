@@ -1,4 +1,5 @@
 
+import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
@@ -48,9 +49,14 @@ public static void main(String[] args) {
         @Override
         public void actionPerformed(ActionEvent e) {
             // TODO Auto-generated method stub
-               float weight=Float.parseFloat(userWeightTextField.getText().toString());
-             float height=Float.parseFloat(userHeightTextField.getText().toString());
-             float bmivalue=weight/(height*height);
+            if(userWeightTextField.getText().isEmpty() || userHeightTextField.getText().isEmpty())
+            {
+                userResultLabel1.setText("Weight or height is empty");
+            }
+            else{
+            float weight=Float.parseFloat(userWeightTextField.getText().toString());
+            float height=Float.parseFloat(userHeightTextField.getText().toString());
+            float bmivalue=weight/(height*height);
             
             userResultLabel2.setText(String.valueOf(bmivalue));
 
@@ -58,19 +64,23 @@ public static void main(String[] args) {
             if(bmivalue<18.5)
         {
             userResultLabel1.setText("You are underweight.");
+            userResultLabel1.setForeground(Color.RED);
         }
             else if(bmivalue<25)
         {
             userResultLabel1.setText("You are normal.");
+            userResultLabel1.setForeground(Color.GREEN);
         }
             else if(bmivalue<30)
         {
             userResultLabel1.setText("You are overweight.");
+            userResultLabel1.setForeground(Color.YELLOW);
         }
             else
         {
             userResultLabel1.setText("You are obese.");
-        }
+            userResultLabel1.setForeground(Color.RED);
+        }}
         
 
         }
