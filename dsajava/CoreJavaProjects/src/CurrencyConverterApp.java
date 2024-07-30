@@ -37,31 +37,36 @@ public static void main(String[] args) {
     resultButton.addActionListener(new ActionListener() {
         @Override
         public void actionPerformed(ActionEvent e){
-            if(!inrField.getText().isEmpty() && usdField.getText().isEmpty())
-            {
-                float inrvalue=Float.parseFloat(inrField.getText().toString());
-                float inrtousd=(float) (inrvalue/83.73);
-                resultLabel.setText(String.valueOf(inrtousd)+"USD");
+            String rupees=inrField.getText();
+            String dollar=usdField.getText();
+            if(!rupees.isEmpty() && dollar.isEmpty())
+            {   
+                resultLabel.setText(String.valueOf(calculateINRtoUSD(rupees))+"USD");
             }
-            else if(inrField.getText().isEmpty() && !usdField.getText().isEmpty())
+            else if(rupees.isEmpty() && !dollar.isEmpty())
             {
-                float usdvalue=Float.parseFloat(usdField.getText().toString());
-                float usdtoinr=(float)(usdvalue*83.73);
-                resultLabel.setText(String.valueOf(usdtoinr)+"INR");
+                resultLabel.setText(String.valueOf(calculateUSDtoINR(dollar))+"INR");
             }
-            else if(inrField.getText().isEmpty() || usdField.getText().isEmpty())
+            else if(rupees.isEmpty() || dollar.isEmpty())
             {
                 resultLabel.setText("Please enter data in at least one field");
             }
             else{
-            float inrvalue=Float.parseFloat(inrField.getText().toString());
-            float usdvalue=Float.parseFloat(usdField.getText().toString());
-            float inrtousd=(float) (inrvalue/83.73);
-            float usdtoinr=(float)(usdvalue*83.73);
-            resultLabel.setText(String.valueOf(inrtousd)+"USD      "+String.valueOf(usdtoinr)+"INR");
+            resultLabel.setText(String.valueOf(calculateINRtoUSD(rupees))+"USD      "+String.valueOf(calculateUSDtoINR(dollar))+"INR");
         }
 
         }
+
+         private float  calculateINRtoUSD(String rupees) {
+             float inrvalue=Float.parseFloat(rupees.toString());
+             return (float) (inrvalue/83.73);
+         }
+
+         private float calculateUSDtoINR(String dollar) {
+            float usdvalue=Float.parseFloat(dollar.toString());
+            return (float)(usdvalue*83.73);
+             
+         }
     });
 
 
