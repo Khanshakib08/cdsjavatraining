@@ -1,9 +1,14 @@
 import java.awt.Color;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
 public class RailwayBookingSystem {
@@ -94,6 +99,66 @@ public static void main(String[] args) {
         JTextField seatpreferenceField=new JTextField();
         seatpreferenceField.setBounds(430, 170, 120, 30);
         frame.add(seatpreferenceField);
+
+        JButton add=new JButton("ADD");
+        add.setBounds(10, 230, 100, 40);
+        frame.add(add);
+        JButton update=new JButton("UPDATE");
+        update.setBounds(230, 230, 100, 40);
+        frame.add(update);
+        JButton delete=new JButton("DELETE");
+        delete.setBounds(450, 230, 100, 40);
+        frame.add(delete);
+        Connection conn=connnection;
+        add.addActionListener(new ActionListener() {
+            @Override
+        public void actionPerformed(ActionEvent e){
+            if(usernameField.getText().isEmpty() || ageField.getText().isEmpty() || genderField.getText().isEmpty()|| mobileField.getText().isEmpty()||emailField.getText().isEmpty()||dojField.getText().isEmpty()|| sourceField.getText().isEmpty()||destinationField.getText().isEmpty()||ticketpriceField.getText().isEmpty()||seatpreferenceField.getText().isEmpty() )
+            {
+                JOptionPane.showMessageDialog(null, "!!KINDLY Fill all fields");
+            }
+           
+            else{ 
+                String insertQuery="INSERT INTO ticketbookingtb (username,age,gender,mobile,email,doj,source,destination,ticketprice,seatpreference) values(?,?,?,?,?,?,?,?,?,?)";
+                try{
+                     PreparedStatement ps=conn.prepareStatement(insertQuery);
+        ps.setString(1, usernameField.getText());
+        ps.setInt(2, Integer.parseInt(ageField.getText()));
+        ps.setString(3, genderField.getText());
+        ps.setString(4, mobileField.getText());
+        ps.setString(5, emailField.getText());
+        ps.setString(6, dojField.getText());
+        ps.setString(7, sourceField.getText());
+        ps.setString(8, destinationField.getText());
+        ps.setString(9, ticketpriceField.getText());
+        ps.setString(10, seatpreferenceField.getText());
+        ps.execute();
+        System.out.println("Your ticket is booked");
+        usernameField.setText("");
+        ageField.setText("");
+        genderField.setText("");
+        mobileField.setText("");
+        emailField.setText("");
+        dojField.setText("");
+        sourceField.setText("");
+        destinationField.setText("");
+        ticketpriceField.setText("");
+        seatpreferenceField.setText("");
+    }
+        catch (SQLException ex) {
+            throw new RuntimeException(ex);
+           }
+        }
+        
+        }});
+
+    delete.addActionListener(new ActionListener() {
+            @Override
+        public void actionPerformed(ActionEvent e){
+            JOptionPane.showMessageDialog(null, "!!KINDLY Fill all fields");
+        }});
+
+
 
 
         frame.setLayout(null);
