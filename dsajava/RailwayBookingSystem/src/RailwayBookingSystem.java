@@ -4,6 +4,7 @@ import java.awt.event.ActionListener;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -12,6 +13,8 @@ import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
 public class RailwayBookingSystem {
+    static boolean isUpdate = true;
+    static String bookingId;
 public static void main(String[] args) {
         String username="root";
         String password="";
@@ -20,7 +23,7 @@ public static void main(String[] args) {
         Connection connnection=DriverManager.getConnection(url, username, password);
     System.out.println("DB connected");
 
-    JFrame frame=new JFrame("Railway Booking System");
+    JFrame frame=new JFrame("Ticket Booking System");
 
         JLabel personalLabel=new JLabel("Personal Details");
         personalLabel.setBounds(10, 10, 120, 30);
@@ -155,8 +158,99 @@ public static void main(String[] args) {
     delete.addActionListener(new ActionListener() {
             @Override
         public void actionPerformed(ActionEvent e){
-            JOptionPane.showMessageDialog(null, "!!KINDLY Fill all fields");
-        }});
+            String booking = JOptionPane.showInputDialog("Enter the booking Id");
+            deleteBooking(booking);
+            }
+                    
+            private void deleteBooking(String bookingid) {
+                                    // TODO Auto-generated method stub
+            String deleteQuery = "delete from ticketbookingtb where bookingid = ?";
+            try {
+            PreparedStatement ps = conn.prepareStatement(deleteQuery);
+            ps.setInt(1, Integer.parseInt(bookingid));
+            ps.executeUpdate();
+            JOptionPane.showMessageDialog(null, "Booking deleted");
+                            
+                            
+            } catch (SQLException e) {
+            throw new RuntimeException(e);
+            }
+            }});
+
+    //     //update the booking
+        
+    update.addActionListener(new ActionListener() {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            if (isUpdate) {
+                bookingId = JOptionPane.showInputDialog("Enter Booking ID to Update");
+                fetchBooking(bookingId);
+                isUpdate = false;
+            } else {
+                updateBooking(bookingId);
+            }
+        }
+    
+        private void fetchBooking(String bookingId) {
+            // SQL query to fetch booking data
+            String selectQuery = "SELECT * FROM ticketbookingtb WHERE bookingid = ?";
+            try {
+                PreparedStatement ps = conn.prepareStatement(selectQuery);
+                ps.setInt(1, Integer.parseInt(bookingId));
+                ResultSet rs = ps.executeQuery();
+    
+                while (rs.next()) {
+                    usernameField.setText(rs.getString("username"));
+                    mobileField.setText(rs.getString("mobile"));
+                    ageField.setText(rs.getString("age"));
+                    dojField.setText(rs.getString("doj"));
+                    emailField.setText(rs.getString("email"));
+                    genderField.setText(rs.getString("gender"));
+                    sourceField.setText(rs.getString("source"));
+                    destinationField.setText(rs.getString("destination"));
+                    ticketpriceField.setText(rs.getString("ticketprice"));
+                    seatpreferenceField.setText(rs.getString("seatpreference"));
+                }
+    
+            } catch (SQLException ex) {
+                ex.printStackTrace();
+            }
+        }
+    
+        private void updateBooking(String bookingId) {
+            String updateQuery = "UPDATE ticketbookingtb SET username = ?, age = ?, gender = ?, mobile = ?, email = ?, doj = ?, source = ?, destination = ?, ticketprice = ?, seatpreference = ? WHERE bookingid = ?";
+            try {
+                PreparedStatement ps = conn.prepareStatement(updateQuery);
+                ps.setString(1, usernameField.getText());
+                ps.setInt(2, Integer.parseInt(ageField.getText()));
+                ps.setString(3, genderField.getText());
+                ps.setString(4, mobileField.getText());
+                ps.setString(5, emailField.getText());
+                ps.setString(6, dojField.getText());
+                ps.setString(7, sourceField.getText());
+                ps.setString(8, destinationField.getText());
+                ps.setString(9, ticketpriceField.getText());
+                ps.setString(10, seatpreferenceField.getText());
+                ps.setInt(11, Integer.parseInt(bookingId));
+    
+                ps.executeUpdate();
+                JOptionPane.showMessageDialog(null, "Ticket updated successfully!");
+                isUpdate = true; // Reset the update state
+                usernameField.setText("");
+                ageField.setText("");
+                genderField.setText("");
+                mobileField.setText("");
+                emailField.setText("");
+                dojField.setText("");
+                sourceField.setText("");
+                destinationField.setText("");
+                ticketpriceField.setText("");
+                seatpreferenceField.setText("");
+            } catch (SQLException ex) {
+                ex.printStackTrace();
+            }
+        }
+    });                       
 
 
 

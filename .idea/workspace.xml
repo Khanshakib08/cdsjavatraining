@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3878f523-224b-4aaf-900d-5fd200608cb7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/dsajava/CoreJavaProjects/taskmanagement/FrontEnd/task-management-frontend/src/TaskList.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dsajava/CoreJavaProjects/taskmanagement/FrontEnd/task-management-frontend/src/api.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dsajava/CoreJavaProjects/taskmanagement/src/main/java/com/example/taskmanagement/controller/TaskController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dsajava/CoreJavaProjects/taskmanagement/src/main/java/com/example/taskmanagement/entity/Task.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dsajava/CoreJavaProjects/taskmanagement/src/main/java/com/example/taskmanagement/repository/TaskRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dsajava/CoreJavaProjects/taskmanagement/src/main/java/com/example/taskmanagement/service/TaskService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AddTwoNumberWithDifferentDatatype.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Do_WhileLoopDemo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dowhile.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ForLoopDemo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ForPattern.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ForPattern2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/For_loop.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/If_condition.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Method.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nested_forloop.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nested_if.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nested_while.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pattern.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PatternDiamond.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PatternDiamond2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PatternHollowSquare.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PatternSquare.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PrintMyName.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Repeated_character.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reverse_String.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ScannerDemo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TernaryOperator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Typecasting.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/While.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/While_LoopDemo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dsajava/CoreJavaProjects/taskmanagement/FrontEnd/task-management-frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/dsajava/CoreJavaProjects/taskmanagement/FrontEnd/task-management-frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dsajava/CoreJavaProjects/taskmanagement/FrontEnd/task-management-frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/dsajava/CoreJavaProjects/taskmanagement/FrontEnd/task-management-frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dsajava/CoreJavaProjects/taskmanagement/FrontEnd/task-management-frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/dsajava/CoreJavaProjects/taskmanagement/FrontEnd/task-management-frontend/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dsajava/RailwayBookingSystem/bin/RailwayBookingSystem$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/dsajava/RailwayBookingSystem/bin/RailwayBookingSystem$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dsajava/RailwayBookingSystem/bin/RailwayBookingSystem$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/dsajava/RailwayBookingSystem/bin/RailwayBookingSystem$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dsajava/RailwayBookingSystem/bin/RailwayBookingSystem.class" beforeDir="false" afterPath="$PROJECT_DIR$/dsajava/RailwayBookingSystem/bin/RailwayBookingSystem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dsajava/RailwayBookingSystem/src/RailwayBookingSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/dsajava/RailwayBookingSystem/src/RailwayBookingSystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/findstringlength.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swapnumbers.c" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 3
+}]]></component>
+  <component name="ProjectId" id="2shZXZWNyIbAasTF8Qbfgi4umn0" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/MD Shakib Khan/OneDrive/Desktop/Github/cdsjavatraining"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3878f523-224b-4aaf-900d-5fd200608cb7" name="Changes" comment="" />
+      <created>1738909807267</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1738909807267</updated>
+    </task>
+    <servers />
+  </component>
+</project>

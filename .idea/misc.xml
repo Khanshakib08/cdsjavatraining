@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/dsajava/CoreJavaProjects/JSPDay2/pom.xml" />
+        <option value="$PROJECT_DIR$/dsajava/CoreJavaProjects/ToDoApp/pom.xml" />
+        <option value="$PROJECT_DIR$/dsajava/CoreJavaProjects/JspDay_2/pom.xml" />
+        <option value="$PROJECT_DIR$/dsajava/CoreJavaProjects/MongoDatabase/demo/pom.xml" />
+        <option value="$PROJECT_DIR$/dsajava/CoreJavaProjects/MongoDatabase/FirstMavenProject/demo/pom.xml" />
+        <option value="$PROJECT_DIR$/dsajava/CoreJavaProjects/taskmanagement/pom.xml" />
+        <option value="$PROJECT_DIR$/dsajava/CoreJavaProjects/MongodbDatabase/pom.xml" />
+        <option value="$PROJECT_DIR$/dsajava/CoreJavaProjects/HelloWorldWebApp/pom.xml" />
+        <option value="$PROJECT_DIR$/dsajava/CoreJavaProjects/HotelBookingSystemMongo/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_21" default="true" project-jdk-name="corretto-21" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>
